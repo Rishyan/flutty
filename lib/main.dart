@@ -126,41 +126,44 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: Container(
-        color: Colors.teal,
-        child: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                color: Colors.red,
-                width: 100,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    color: Colors.yellow,
-                    width: 100,
-                    height: 100,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    width: 100,
-                    height: 100,
-                  ),
-                ],
-              ),
-              Container(
-                color: Colors.blue,
-                width: 100,
-              ),
-            ],
-          ),
-        ),
-      ),
+      title: 'Flutty',
+      home: HomePage(),
     );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    TextStyle textStyle = TextStyle(
+      color: Colors.teal.shade100,
+      fontSize: 20,
+      fontFamily: 'Source Sans Pro',
+      fontWeight: FontWeight.bold,
+    );
+
+    return Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+            child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+              CircleAvatar(radius: 50, backgroundImage: AssetImage('')),
+              Text(
+                'Rishyan Navaratnarajah',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text('Mobile Developer', style: textStyle)
+            ]))));
   }
 }

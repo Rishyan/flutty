@@ -1,8 +1,43 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen());
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('Flutty')),
+        body: Center(
+          child: Card(
+            color: Colors.grey[300],
+            elevation: 10.0,
+            child: Container(
+                height: 100.0,
+                width: 100.0,
+                alignment: Alignment.center,
+                child: Text(
+                  'Page d\'acceui!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20.0),
+                )),
+          ),
+        ));
+  }
+}
 
 // class MyApp extends StatelessWidget {
 //   // This widget is the root of your application.
@@ -116,54 +151,54 @@
 //   }
 // }
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutty',
-      home: HomePage(),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutty',
+//       home: HomePage(),
+//     );
+//   }
+// }
 
-class HomePage extends StatelessWidget {
-  const HomePage({
-    Key key,
-  }) : super(key: key);
+// class HomePage extends StatelessWidget {
+//   const HomePage({
+//     Key key,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    TextStyle textStyle = TextStyle(
-      color: Colors.teal.shade100,
-      fontSize: 20,
-      fontFamily: 'Source Sans Pro',
-      fontWeight: FontWeight.bold,
-    );
+//   @override
+//   Widget build(BuildContext context) {
+//     TextStyle textStyle = TextStyle(
+//       color: Colors.teal.shade100,
+//       fontSize: 20,
+//       fontFamily: 'Source Sans Pro',
+//       fontWeight: FontWeight.bold,
+//     );
 
-    return Scaffold(
-        backgroundColor: Colors.teal,
-        body: SafeArea(
-            child: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-              CircleAvatar(radius: 50, backgroundImage: AssetImage('')),
-              Text(
-                'Rishyan Navaratnarajah',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontFamily: 'Pacifico',
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text('Mobile Developer', style: textStyle)
-            ]))));
-  }
-}
+//     return Scaffold(
+//         backgroundColor: Colors.teal,
+//         body: SafeArea(
+//             child: Center(
+//                 child: Column(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//               CircleAvatar(radius: 50, backgroundImage: AssetImage('')),
+//               Text(
+//                 'Rishyan Navaratnarajah',
+//                 style: TextStyle(
+//                   color: Colors.white,
+//                   fontSize: 30,
+//                   fontFamily: 'Pacifico',
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//               Text('Mobile Developer', style: textStyle)
+//             ]))));
+//   }
+// }

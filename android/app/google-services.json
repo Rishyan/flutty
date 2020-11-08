@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "335826804755",
+    "firebase_url": "https://flutty-f4ccb.firebaseio.com",
+    "project_id": "flutty-f4ccb",
+    "storage_bucket": "flutty-f4ccb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335826804755:android:2f0555b2bbfd8b083fdfe6",
+        "android_client_info": {
+          "package_name": "com.example.firebase_authentication_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335826804755-rqbo1tqp6jgnog3j4t0dnge7f5rtvuoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsWzAQfy0gztMxKXMcA0jthAaqYTMvGyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335826804755-rqbo1tqp6jgnog3j4t0dnge7f5rtvuoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335826804755:android:602d3312be3d0c483fdfe6",
+        "android_client_info": {
+          "package_name": "com.example.flutty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335826804755-rqbo1tqp6jgnog3j4t0dnge7f5rtvuoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsWzAQfy0gztMxKXMcA0jthAaqYTMvGyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335826804755-rqbo1tqp6jgnog3j4t0dnge7f5rtvuoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

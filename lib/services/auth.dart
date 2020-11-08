@@ -34,4 +34,12 @@ class AuthService {
   //s'inscrire avec email et mdp
 
   //deconnexion
+  Future signOut() async {
+    try {
+      return await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 }

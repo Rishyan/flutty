@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutty/models/user.dart';
+import 'package:flutty/services/database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -29,7 +30,19 @@ class AuthService {
       return null;
     }
   }
+
   // connexion avec email
+  Future connexionEmailetPsswd(String email, String password) async {
+    try {
+      AuthResult result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      FirebaseUser user = result.user;
+      return _userDeFirebase(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 
   //s'inscrire avec email et mdp
   Future inscriptionEmailetPsswd(String email, String password) async {
@@ -37,6 +50,9 @@ class AuthService {
       AuthResult result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       FirebaseUser user = result.user;
+
+      //create a new document
+      await DatabaseService(uid: user.uid).updateUserData('0', 'new', 100);
       return _userDeFirebase(user);
     } catch (e) {
       print(e.toString());

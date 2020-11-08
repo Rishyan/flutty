@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutty/services/auth.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   final Function toggleView;
-  SignIn({this.toggleView});
+  Register({this.toggleView});
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
-  final AuthService _auth = AuthService();
-
+class _RegisterState extends State<Register> {
   // text field state
   String email = '';
   String motdepass = '';
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +22,15 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Flutty'),
+        title: Text('Register in to Flutty'),
         actions: <Widget>[
           FlatButton.icon(
-              icon: Icon(Icons.person),
-              label: Text('Register in'),
-              onPressed: () {
-                widget.toggleView();
-              })
+            icon: Icon(Icons.person),
+            label: Text('Sign in'),
+            onPressed: () {
+              widget.toggleView();
+            },
+          )
         ],
       ),
       body: Container(
@@ -51,7 +52,7 @@ class _SignInState extends State<SignIn> {
               RaisedButton(
                 color: Colors.pink[400],
                 child: Text(
-                  'Sign in',
+                  'Register in',
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () async {

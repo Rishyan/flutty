@@ -32,6 +32,17 @@ class AuthService {
   // connexion avec email
 
   //s'inscrire avec email et mdp
+  Future inscriptionEmailetPsswd(String email, String password) async {
+    try {
+      AuthResult result = await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      FirebaseUser user = result.user;
+      return _userDeFirebase(user);
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 
   //deconnexion
   Future signOut() async {
